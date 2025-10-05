@@ -59,7 +59,10 @@ public final class DotsBoard extends Board {
     }
 
     public boolean allBoxesClaimed() {
-        for (int r=0;r<rows-1;r++) for (int c=0;c<cols-1;c++) if (!boxes[r][c].hasOwner()) return false;
+        for (int r=0;r<rows-1;r++)
+            for (int c=0;c<cols-1;c++)
+                if (!boxes[r][c].hasOwner())
+                    return false;
         return true;
     }
 
