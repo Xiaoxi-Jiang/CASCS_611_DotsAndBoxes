@@ -18,4 +18,8 @@ public final class Box {
         if (!hasOwner() && isClosed()) { owner = p; return true; }
         return false;
     }
+
+    public void reset() {
+        owner = null;
+    }
 }
