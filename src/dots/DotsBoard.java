@@ -16,7 +16,7 @@ public final class DotsBoard extends Board {
         for (int r=0;r<rows-1;r++) for (int c=0;c<cols;c++) vert[r][c]  = new Edge(r,c, Edge.Orient.V);
         boxes = new Box[rows-1][cols-1];
         for (int r=0;r<rows-1;r++) for (int c=0;c<cols-1;c++)
-            boxes[r][c] = new Box(horiz[r][c], vert[r][c+1-1], horiz[r+1][c], vert[r][c]);
+            boxes[r][c] = new Box(horiz[r][c], vert[r][c+1], horiz[r+1][c], vert[r][c]);
     }
 
     @Override public void reset() {
