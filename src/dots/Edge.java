@@ -18,4 +18,8 @@ public final class Edge {
         if (!isFree()) throw new IllegalStateException("Edge already claimed");
         owner = p;
     }
+
+    public void reset() {
+        owner = null;
+    }
 }

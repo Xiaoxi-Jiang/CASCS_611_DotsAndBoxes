@@ -20,11 +20,21 @@ public final class DotsBoard extends Board {
     }
 
     @Override public void reset() {
-        // Edges “owner = null”; Boxes “owner = null”
-        for (Edge[] row: horiz) for (Edge e: row) try { if (e.owner()!=null) { // reflectively?
-        } } catch(Exception ignore){}
-        // Simpler: rebuild board for reset (safe & clear):
-        // (Optional: leave as no-op for A2; typical flows don’t call reset mid-game.)
+        for (Edge[] row : horiz) {
+            for (Edge edge : row) {
+                edge.reset();
+            }
+        }
+        for (Edge[] row : vert) {
+            for (Edge edge : row) {
+                edge.reset();
+            }
+        }
+        for (Box[] row : boxes) {
+            for (Box box : row) {
+                box.reset();
+            }
+        }
     }
 
     public Edge getEdge(int r, int c, Edge.Orient o) {
