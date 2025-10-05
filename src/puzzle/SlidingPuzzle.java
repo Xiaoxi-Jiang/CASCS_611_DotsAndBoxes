@@ -14,11 +14,6 @@ public class SlidingPuzzle extends Game {
     private final Scanner sc = new Scanner(System.in);
     private Player player;
 
-    /** Concise main: no game logic here. */
-    public static void main(String[] args) {
-        new SlidingPuzzle().start();
-    }
-
     /** Starts UI loop, validates inputs, and delegates moves to the Board. */
     @Override
     public void start() {
